@@ -5,14 +5,15 @@ import Icons from "../../Util/Icons";
 import Grid from "../UI/Layout/Grid";
 
 export default ({}) => {
-    return <Page>
+    return <Page title={"Главное меню"}>
         <Grid>
-            <SquareImgButton text={"Баланс"} src={Icons.creditCard} />
-            <SquareImgButton text={"Кликер"} src={Icons.dollarCoin} />
-            <SquareImgButton text={"Магазин"} src={Icons.shoppingCart} />
-            <SquareImgButton text={"Деятельность"} src={Icons.jobSeeker} />
-            <SquareImgButton text={"Рейтинг"} src={Icons.barChart} />
-            <SquareImgButton text={"Настройки"} src={Icons.settings} />
+            <SquareImgButton text={"Профиль"} src={Icons.user} path={"/profile"}/>
+            <SquareImgButton text={"Баланс"} src={Icons.creditCard} path={"/balance"}/>
+            <SquareImgButton text={"Кликер"} src={Icons.dollarCoin} path={"/clicker"}/>
+            <SquareImgButton text={"Магазин"} src={Icons.shoppingCart} path={"/shop"}/>
+            <SquareImgButton text={"Рейтинг"} src={Icons.barChart} path={"/rating"}/>
+            <SquareImgButton text={"Настройки"} src={Icons.settings} path={"/settings"}/>
+            <SquareImgButton text={"Деятельность"} src={Icons.jobSeeker} path={"/activity"}/>
         </Grid>
     </Page>
 }

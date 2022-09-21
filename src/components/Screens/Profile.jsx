@@ -13,7 +13,7 @@ export default () => {
     const countSelector = useSelector(state => state.counter.value)
     const navigate = useNavigate()
 
-    return <Page>
+    return <Page title={"Профиль"}>
         <h1>profile {countSelector}</h1>
         {/*<Button text={"inc"} onClick={() => dispatch(inc())}/>*/}
         {/*<Button text={"dec"} onClick={() => dispatch(dec())}/>*/}

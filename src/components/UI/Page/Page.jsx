@@ -2,7 +2,7 @@ import React from "react";
 import PageHeader from "./PageHeader";
 import PageFooter from "./PageFooter";
 
-export default function(props) {
+export default function({title, children}) {
     return (
         <div style={{
             width: "100vw",
@@ -15,9 +15,9 @@ export default function(props) {
             marginTop: "2vh",
             marginBottom: "2vh"
         }}>
-            <PageHeader/>
+            <PageHeader title={title}/>
             <div style={{height: "90vh"}}>
-                {props.children}
+                {children}
             </div>
             {/*<PageFooter/>*/}
         </div>

@@ -4,5 +4,7 @@ export default {
     creditCard: "./Icons/credit-card.png",
     shoppingCart: "./Icons/shopping-cart.png",
     jobSeeker: "./Icons/job-seeker.png",
-    barChart: "./Icons/bar-chart.png"
+    barChart: "./Icons/bar-chart.png",
+    user: "./Icons/user.png",
+    back: "./Icons/back.png"
 }
