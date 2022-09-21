@@ -10,13 +10,16 @@ export default function(props) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            gap: "5vh",
 
             marginTop: "2vh",
             marginBottom: "2vh"
         }}>
             <PageHeader/>
-            {props.children}
-            <PageFooter/>
+            <div style={{height: "90vh"}}>
+                {props.children}
+            </div>
+            {/*<PageFooter/>*/}
         </div>
     );
 }
