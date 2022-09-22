@@ -6,7 +6,7 @@ export default ({children}) => {
         flexDirection: "row",
         flexWrap: "wrap",
         gap: "3vmax",
-        marginLeft: "2vmax"
+        justifyContent: "space-evenly"
     }}>
         {children}
     </div>

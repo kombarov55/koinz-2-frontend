@@ -11,7 +11,7 @@ export default ({
 
     switch (size) {
         case "medium":
-            fontSize = "4vmin"
+            fontSize = "3vmin"
             break;
         case "small":
             fontSize = "1vmax"
