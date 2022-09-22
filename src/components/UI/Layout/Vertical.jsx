@@ -6,7 +6,8 @@ export default function ({
                              width = "100%",
                              margin = "",
                              padding = "",
-                             border = "none"
+                             border = "none",
+                             boxShadowEnabled = false
                          }) {
 
     return (
@@ -19,7 +20,8 @@ export default function ({
             margin: margin,
             padding: padding,
             border: border,
-            borderRadius: "1vmin"
+            borderRadius: "1vmin",
+            boxShadow: boxShadowEnabled ? "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)" : "none"
         }}>
             {children}
         </div>
