@@ -1,10 +1,23 @@
 import React from "react";
 
-export default ({src}) => {
+export default ({src, size = "medium"}) => {
+    let sideLength;
+
+    switch (size) {
+        case "medium":
+            sideLength = "5vmax"
+            break;
+        case "small":
+            sideLength = "2vmax"
+            break;
+        case "big":
+            sideLength = "10vmax"
+            break;
+
+    }
+
     return <img src={src} style={{
-        width: "7vmax",
-        height: "7vmax"
-    }}>
-        
-    </img>
+        width: sideLength,
+        height: sideLength
+    }}/>
 }
