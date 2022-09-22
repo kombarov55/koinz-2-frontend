@@ -6,8 +6,11 @@ import CurrentJobComponent from "./CurrentJobComponent";
 import Button from "../../UI/UIComponents/Button";
 import ElevatedVertical from "../../UI/Layout/ElevatedVertical";
 import Label from "../../UI/UIComponents/Label";
+import {useNavigate} from "react-router-dom";
 
 export default ({}) => {
+    const navigate = useNavigate()
+
     return <Page title={"Работа"}>
         <Vertical>
             <BalanceComponent money={"500"} xp={1000}/>
@@ -17,7 +20,7 @@ export default ({}) => {
                 <Label text={"Зарплата: $100 / $16800"}/>
                 <Label text={"Опыт: 3 xp / 504 xp"}/>
                 <Button text={"Собрать"}/>
-                <Button text={"Список вакансий"}/>
+                <Button text={"Список вакансий"} onClick={() => navigate("/work-list")}/>
             </ElevatedVertical>
 
         </Vertical>

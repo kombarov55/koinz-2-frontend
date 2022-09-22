@@ -24,37 +24,39 @@ import BusinessScreen from "./components/Screens/Activity/BusinessScreen";
 import MiningScreen from "./components/Screens/Activity/MiningScreen";
 import CasinoScreen from "./components/Screens/Activity/CasinoScreen";
 import GamesScreen from "./components/Screens/Activity/GamesScreen";
+import WorkListScreen from "./components/Screens/Activity/WorkListScreen";
 
 const rootElement = document.getElementById("root");
 
 render(
     <Provider store={Store}>
-            <HashRouter>
-                <Routes>
-                    <Route path={"/"} element={<MainManuScreen/>}/>
-                    <Route path={"/profile"} element={<Profile/>}/>
-                    <Route path={"/balance"} element={<BalanceScreen/>}/>
-                    <Route path={"/clicker"} element={<ClickerScreen/>}/>
-                    <Route path={"/shop"} element={<ShopScreen/>}/>
-                    <Route path={"/activity"} element={<ActivityScreen/>}/>
-                    <Route path={"/rating"} element={<RatingScreen/>}/>
-                    <Route path={"/settings"} element={<SettingsScreen/>}/>
+        <HashRouter>
+            <Routes>
+                <Route path={"/"} element={<MainManuScreen/>}/>
+                <Route path={"/profile"} element={<Profile/>}/>
+                <Route path={"/balance"} element={<BalanceScreen/>}/>
+                <Route path={"/clicker"} element={<ClickerScreen/>}/>
+                <Route path={"/shop"} element={<ShopScreen/>}/>
+                <Route path={"/activity"} element={<ActivityScreen/>}/>
+                <Route path={"/rating"} element={<RatingScreen/>}/>
+                <Route path={"/settings"} element={<SettingsScreen/>}/>
 
-                    <Route path={"/clothes"} element={<ClothesScreen/>}/>
-                    <Route path={"/gadgets"} element={<GadgetsScreen/>}/>
-                    <Route path={"/property"} element={<PropertyScreen/>}/>
-                    <Route path={"/real-estate"} element={<RealEstateScreen/>}/>
-                    <Route path={"/vehicles"} element={<VehiclesScreen/>}/>
+                <Route path={"/clothes"} element={<ClothesScreen/>}/>
+                <Route path={"/gadgets"} element={<GadgetsScreen/>}/>
+                <Route path={"/property"} element={<PropertyScreen/>}/>
+                <Route path={"/real-estate"} element={<RealEstateScreen/>}/>
+                <Route path={"/vehicles"} element={<VehiclesScreen/>}/>
 
-                    <Route path={"/work"} element={<WorkScreen/>}/>
-                    <Route path={"/education"} element={<EducationScreen/>}/>
-                    <Route path={"/business"} element={<BusinessScreen/>}/>
-                    <Route path={"/mining"} element={<MiningScreen/>}/>
-                    <Route path={"/casino"} element={<CasinoScreen/>}/>
-                    <Route path={"/games"} element={<GamesScreen/>}/>
+                <Route path={"/work"} element={<WorkScreen/>}/>
+                <Route path={"/work-list"} element={<WorkListScreen/>}/>
+                <Route path={"/education"} element={<EducationScreen/>}/>
+                <Route path={"/business"} element={<BusinessScreen/>}/>
+                <Route path={"/mining"} element={<MiningScreen/>}/>
+                <Route path={"/casino"} element={<CasinoScreen/>}/>
+                <Route path={"/games"} element={<GamesScreen/>}/>
 
-                </Routes>
-            </HashRouter>
+            </Routes>
+        </HashRouter>
     </Provider>,
     rootElement
 );
