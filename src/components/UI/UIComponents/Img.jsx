@@ -10,6 +10,9 @@ export default ({src, size = "medium"}) => {
         case "small":
             sideLength = "2vmax"
             break;
+        case "normal":
+            sideLength = "3vmax"
+            break;
         case "big":
             sideLength = "10vmax"
             break;

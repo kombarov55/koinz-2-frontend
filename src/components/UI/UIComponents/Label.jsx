@@ -16,6 +16,9 @@ export default ({
         case "small":
             fontSize = "1vmax"
             break;
+        case "normal":
+            fontSize = "5vmin"
+            break;
         case "big":
             fontSize = "8vmin"
             break;
