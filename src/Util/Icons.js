@@ -13,5 +13,11 @@ export default {
     realEstate: `${rootDir}/real-estate.png`,
     smartphone: `${rootDir}/smartphone.png`,
     tv: `${rootDir}/tv.png`,
-    vehicle: `${rootDir}/vehicle.png`
+    vehicle: `${rootDir}/vehicle.png`,
+    business: `${rootDir}/business.png`,
+    casino: `${rootDir}/casino.png`,
+    dice: `${rootDir}/dice.png`,
+    education: `${rootDir}/education.png`,
+    qr: `${rootDir}/qr.png`,
+    suitcase: `${rootDir}/suitcase.png`
 }
