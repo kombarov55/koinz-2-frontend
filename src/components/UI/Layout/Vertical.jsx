@@ -3,7 +3,10 @@ import React from "react";
 export default function ({
                              children,
                              alignItems = "center",
-                             width = "100%"
+                             width = "100%",
+                             margin = "",
+                             padding = "",
+                             border = "none"
                          }) {
 
     return (
@@ -13,6 +16,10 @@ export default function ({
             gap: "2vh",
             width: width,
             alignItems: alignItems,
+            margin: margin,
+            padding: padding,
+            border: border,
+            borderRadius: "1vmin"
         }}>
             {children}
         </div>

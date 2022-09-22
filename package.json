@@ -9,7 +9,7 @@
     "formik": "^2.2.9",
     "lodash": "^4.17.15",
     "primeflex": "^1.0.0",
-    "primeicons": "^2.0.0",
+    "primeicons": "^5.0.0",
     "primereact": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

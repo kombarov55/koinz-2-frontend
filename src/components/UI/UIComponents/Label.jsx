@@ -1,6 +1,12 @@
 import React from "react";
 
-export default ({text, size = "medium", textAlign = "start"}) => {
+export default ({
+                    text,
+                    size = "medium",
+                    textAlign = "start",
+                    color = "black",
+                    fontWeight = "normal"
+                }) => {
     let fontSize = "";
 
     switch (size) {
@@ -17,7 +23,9 @@ export default ({text, size = "medium", textAlign = "start"}) => {
     return (
         <div style={{
             fontSize: fontSize,
-            textAlign: textAlign
+            textAlign: textAlign,
+            color: color,
+            fontWeight: fontWeight
         }}>
             {text}
         </div>

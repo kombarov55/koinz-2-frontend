@@ -4,7 +4,8 @@ export default function ({
                              children,
                              justifyContent = "space-around",
                              width = "100%",
-                             padding = ""
+                             padding = "",
+                             gap = "0"
                          }) {
     return (
         <div style={{
@@ -13,7 +14,8 @@ export default function ({
             alignItems: "center",
             justifyContent: justifyContent,
             width: width,
-            padding: padding
+            padding: padding,
+            gap: gap
         }}>
             {children}
         </div>
