@@ -19,7 +19,7 @@ export default ({dto}) => {
             <Label text={name} size={"big"}/>
         </Horizontal>
         <Label text={description}/>
-        <Label text={"100$"} color={"rgb(11 155 82)"} fontWeight={"bold"}/>
+        <Label text={price} color={"rgb(11 155 82)"} fontWeight={"bold"}/>
         <Button text={"Купить"}/>
     </Vertical>
 }
