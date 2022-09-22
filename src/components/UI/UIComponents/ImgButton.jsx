@@ -1,7 +1,6 @@
 import React from "react";
-import Icon from "./Icon";
 
-export default props => (
+export default ({src, text, onClick}) => (
     <div style={{
         display: "flex",
         flexDirection: "row",
@@ -12,11 +11,15 @@ export default props => (
 
         padding: "0.5vmax 0.7vmax",
 
-        color: "white",
-        background: "black"
+        color: "black",
+        background: "white"
 
-    }} onClick={() => props.onClick()}>
-        <Icon name={props.iconName} size={"2.5vmax"} color={"white"}/>
-        <div style={{fontSize: "2.5vmax", fontWeight: "bold"}}>{props.text}</div>
+    }} onClick={() => onClick()}>
+        <img src={src} style={{
+            marginTop: "0.8vh",
+            height: "2.5vmax",
+            width: "2.5vmax"
+        }}/>
+        <div style={{fontSize: "2.5vmax", fontWeight: "bold"}}>{text}</div>
     </div>
 )
