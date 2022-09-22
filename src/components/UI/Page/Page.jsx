@@ -2,7 +2,7 @@ import React from "react";
 import PageHeader from "./PageHeader";
 import PageFooter from "./PageFooter";
 
-export default function({title, children, alignItems = "flex-start"}) {
+export default function({title, children, centerStretched = false}) {
     return (
         <div style={{
             width: "100vw",
@@ -10,19 +10,18 @@ export default function({title, children, alignItems = "flex-start"}) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            alignItems: alignItems,
             gap: "5vh",
 
             marginTop: "2vh",
             marginBottom: "2vh"
         }}>
             <PageHeader title={title}/>
-            <div style={{
+            <div style={ centerStretched ? {
                 height: "90vh",
                 width: "90vw",
                 display: "flex",
                 justifyContent: "center"
-            }}>
+            } : { height: "90vh" }}>
                 {children}
             </div>
             {/*<PageFooter/>*/}
