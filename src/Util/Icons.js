@@ -19,5 +19,7 @@ export default {
     dice: `${rootDir}/dice.png`,
     education: `${rootDir}/education.png`,
     qr: `${rootDir}/qr.png`,
-    suitcase: `${rootDir}/suitcase.png`
+    suitcase: `${rootDir}/suitcase.png`,
+    books: `${rootDir}/books.png`,
+    wallet: `${rootDir}/wallet.png`
 }
