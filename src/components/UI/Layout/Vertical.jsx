@@ -3,18 +3,21 @@ import React from "react";
 export default function ({
                              children,
                              alignItems = "center",
+                             justifyContent = "",
                              width = "100%",
                              margin = "",
                              padding = "",
                              border = "none",
-                             boxShadowEnabled = false
+                             boxShadowEnabled = false,
+                             gap = "2vh",
                          }) {
 
     return (
         <div style={{
             display: "flex",
             flexDirection: "column",
-            gap: "2vh",
+            justifyContent: justifyContent,
+            gap: gap,
             width: width,
             alignItems: alignItems,
             margin: margin,

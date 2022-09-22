@@ -21,5 +21,7 @@ export default {
     qr: `${rootDir}/qr.png`,
     suitcase: `${rootDir}/suitcase.png`,
     books: `${rootDir}/books.png`,
-    wallet: `${rootDir}/wallet.png`
+    wallet: `${rootDir}/wallet.png`,
+    courier: `${rootDir}/courier.png`,
+    coins: `${rootDir}/coins.png`
 }

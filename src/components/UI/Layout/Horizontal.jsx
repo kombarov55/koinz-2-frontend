@@ -3,15 +3,16 @@ import React from "react";
 export default function ({
                              children,
                              justifyContent = "space-around",
+                             alignItems = "",
                              width = "100%",
                              padding = "",
-                             gap = "0"
+                             gap = "1vmax"
                          }) {
     return (
         <div style={{
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",
+            alignItems: alignItems,
             justifyContent: justifyContent,
             width: width,
             padding: padding,
