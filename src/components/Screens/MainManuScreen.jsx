@@ -9,10 +9,10 @@ export default ({}) => {
         <Grid>
             <SquareImgButton text={"Профиль"} src={Icons.user} path={"/profile"}/>
             <SquareImgButton text={"Баланс"} src={Icons.creditCard} path={"/balance"}/>
-            <SquareImgButton text={"Кликер"} src={Icons.dollarCoin} path={"/clicker"}/>
-            <SquareImgButton text={"Магазин"} src={Icons.shoppingCart} path={"/shop"}/>
             <SquareImgButton text={"Рейтинг"} src={Icons.barChart} path={"/rating"}/>
             <SquareImgButton text={"Настройки"} src={Icons.settings} path={"/settings"}/>
+            <SquareImgButton text={"Кликер"} src={Icons.dollarCoin} path={"/clicker"}/>
+            <SquareImgButton text={"Магазин"} src={Icons.shoppingCart} path={"/shop"}/>
             <SquareImgButton text={"Деятельность"} src={Icons.jobSeeker} path={"/activity"}/>
         </Grid>
     </Page>
