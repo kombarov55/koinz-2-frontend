@@ -12,20 +12,24 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import FundsProgressBar from "../../UI/UIComponents/FundsProgressBar";
 
 export default ({work, employmentDate}) => {
-    const {
-        src,
-        name,
-        moneyWage,
-        currentMoneyAccumulation,
-        maxMoneyAccumulation,
-        xpWage,
-        maxXpAccumulation,
-        currentXpAccumulation
-    } = work
-
     return <ElevatedVertical>
+        {work != null ? displayWork(work, employmentDate) : displayAbsence()}
+    </ElevatedVertical>
+}
+
+function displayWork({
+                         src,
+                         name,
+                         moneyWage,
+                         currentMoneyAccumulation,
+                         maxMoneyAccumulation,
+                         xpWage,
+                         maxXpAccumulation,
+                         currentXpAccumulation,
+                     }, employmentDate) {
+    return <>
         <Horizontal justifyContent={"flex-start"}>
-            <Avatar src={work.src}/>
+            <Avatar src={src}/>
             <Vertical alignItems={"flex-start"} gap={"none"}>
                 <Label text={name} size={"bigger"}/>
                 <Label text={`Работа с ${FormatDate(employmentDate)}`}/>
@@ -53,6 +57,11 @@ export default ({work, employmentDate}) => {
             <Button text={"Собрать"}/>
             <Button text={"Уволиться"}/>
         </Horizontal>
-    </ElevatedVertical>
+    </>
+}
 
+function displayAbsence() {
+    return <>
+        <Label text={"Вы безработны"} size={"bigger"} textAlign={"center"} fontStyle={"italic"}/>
+    </>
 }

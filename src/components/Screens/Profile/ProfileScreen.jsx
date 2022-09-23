@@ -5,6 +5,9 @@ import Page from "../../UI/Page/Page";
 import AccountInfoComponent from "./AccountInfoComponent";
 import FundsComponent from "./FundsComponent";
 import CurrentWorkComponent from "./CurrentWorkComponent";
+import Button from "../../UI/UIComponents/Button";
+import ElevatedVertical from "../../UI/Layout/ElevatedVertical";
+import Horizontal from "../../UI/Layout/Horizontal";
 
 export default () => {
     const navigate = useNavigate()
@@ -34,6 +37,16 @@ export default () => {
             <AccountInfoComponent account={account}/>
             <FundsComponent account={account}/>
             <CurrentWorkComponent work={account.currentWork} employmentDate={account.employmentDate}/>
+            <ElevatedVertical gap={"none"}>
+                <Horizontal>
+                    <Button text={"Магазин"} onClick={() => navigate("/shop")}/>
+                    <Button text={"Вакансии"} onClick={() => navigate("/work-list")}/>
+                </Horizontal>
+                <Horizontal>
+                    <Button text={"Образование"} onClick={() => navigate("/education")}/>
+                    <Button text={"Главное меню"} onClick={() => navigate("/")}/>
+                </Horizontal>
+            </ElevatedVertical>
         </Vertical>
     </Page>
 }

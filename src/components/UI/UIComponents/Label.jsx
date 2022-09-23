@@ -5,7 +5,8 @@ export default ({
                     size = "medium",
                     textAlign = "start",
                     color = "black",
-                    fontWeight = "normal"
+                    fontWeight = "normal",
+                    fontStyle = "normal"
                 }) => {
     let fontSize = "";
 
@@ -28,7 +29,8 @@ export default ({
             fontSize: fontSize,
             textAlign: textAlign,
             color: color,
-            fontWeight: fontWeight
+            fontWeight: fontWeight,
+            fontStyle: fontStyle
         }}>
             {text}
         </div>

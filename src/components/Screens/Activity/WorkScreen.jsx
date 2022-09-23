@@ -8,24 +8,26 @@ import ElevatedVertical from "../../UI/Layout/ElevatedVertical";
 import Label from "../../UI/UIComponents/Label";
 import {useNavigate} from "react-router-dom";
 import Horizontal from "../../UI/Layout/Horizontal";
+import CurrentWorkComponent from "../Profile/CurrentWorkComponent";
 
 export default ({}) => {
     const navigate = useNavigate()
 
+    const work = {
+        name: "Курьер",
+        src: "https://play-lh.googleusercontent.com/m6-gFunvj7aQD5fdv8EdJZBN5M4REIobTaPZPYS0K5Td7CNYnazN7fOKiPwwaY3hJw",
+        moneyWage: 200,
+        currentMoneyAccumulation: 10000,
+        maxMoneyAccumulation: 16000,
+        xpWage: 50,
+        maxXpAccumulation: 1000,
+        currentXpAccumulation: 100
+    }
+
     return <Page title={"Работа"}>
         <Vertical>
             <BalanceComponent money={"500"} xp={1000}/>
-            <CurrentJobComponent/>
-
-            <ElevatedVertical>
-                <Label text={"Зарплата: $100 / $16800"}/>
-                <Label text={"Опыт: 3 xp / 504 xp"}/>
-                <Horizontal>
-                    <Button text={"Собрать"}/>
-                    <Button text={"Список вакансий"} onClick={() => navigate("/work-list")}/>
-                </Horizontal>
-            </ElevatedVertical>
-
+            <CurrentWorkComponent work={work} employmentDate={new Date().toDateString()}/>
         </Vertical>
     </Page>
 }
