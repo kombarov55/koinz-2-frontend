@@ -6,7 +6,6 @@ import './index.css'
 import {Provider} from "react-redux";
 import Store from "./redux/Store";
 import MainManuScreen from "./components/Screens/MainManuScreen";
-import Profile from "./components/Screens/Profile";
 import ClickerScreen from "./components/Screens/ClickerScreen";
 import ShopScreen from "./components/Screens/Shop/ShopScreen";
 import RatingScreen from "./components/Screens/RatingScreen";
@@ -14,7 +13,6 @@ import SettingsScreen from "./components/Screens/SettingsScreen";
 import BalanceScreen from "./components/Screens/BalanceScreen";
 import ClothesScreen from "./components/Screens/Shop/ClothesScreen";
 import GadgetsScreen from "./components/Screens/Shop/GadgetsScreen";
-import PropertyScreen from "./components/Screens/Shop/PropertyScreen";
 import RealEstateScreen from "./components/Screens/Shop/RealEstateScreen";
 import VehiclesScreen from "./components/Screens/Shop/VehiclesScreen";
 import ActivityScreen from "./components/Screens/Activity/ActivityScreen";
@@ -25,7 +23,10 @@ import MiningScreen from "./components/Screens/Activity/MiningScreen";
 import CasinoScreen from "./components/Screens/Activity/CasinoScreen";
 import GamesScreen from "./components/Screens/Activity/GamesScreen";
 import WorkListScreen from "./components/Screens/Activity/WorkListScreen";
+import LoadContent from "./Util/LoadContent";
+import Profile from "./components/Screens/Profile/ProfileScreen";
 
+LoadContent()
 const rootElement = document.getElementById("root");
 
 render(
@@ -43,7 +44,6 @@ render(
 
                 <Route path={"/clothes"} element={<ClothesScreen/>}/>
                 <Route path={"/gadgets"} element={<GadgetsScreen/>}/>
-                <Route path={"/property"} element={<PropertyScreen/>}/>
                 <Route path={"/real-estate"} element={<RealEstateScreen/>}/>
                 <Route path={"/vehicles"} element={<VehiclesScreen/>}/>
 

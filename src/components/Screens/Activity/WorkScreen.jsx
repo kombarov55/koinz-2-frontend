@@ -7,6 +7,7 @@ import Button from "../../UI/UIComponents/Button";
 import ElevatedVertical from "../../UI/Layout/ElevatedVertical";
 import Label from "../../UI/UIComponents/Label";
 import {useNavigate} from "react-router-dom";
+import Horizontal from "../../UI/Layout/Horizontal";
 
 export default ({}) => {
     const navigate = useNavigate()
@@ -19,8 +20,10 @@ export default ({}) => {
             <ElevatedVertical>
                 <Label text={"Зарплата: $100 / $16800"}/>
                 <Label text={"Опыт: 3 xp / 504 xp"}/>
-                <Button text={"Собрать"}/>
-                <Button text={"Список вакансий"} onClick={() => navigate("/work-list")}/>
+                <Horizontal>
+                    <Button text={"Собрать"}/>
+                    <Button text={"Список вакансий"} onClick={() => navigate("/work-list")}/>
+                </Horizontal>
             </ElevatedVertical>
 
         </Vertical>

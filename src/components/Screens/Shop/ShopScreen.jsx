@@ -10,7 +10,6 @@ export default ({}) => {
             <SquareImgButton text={"Одежда"} src={Icons.clothes} path={"/clothes"}/>
             <SquareImgButton text={"Гаджеты"} src={Icons.smartphone} path={"/gadgets"}/>
             <SquareImgButton text={"Транспорт"} src={Icons.vehicle} path={"/vehicles"}/>
-            <SquareImgButton text={"Имущество"} src={Icons.tv} path={"/property"}/>
             <SquareImgButton text={"Недвижимость"} src={Icons.realEstate} path={"/real-estate"}/>
         </Grid>
     </Page>

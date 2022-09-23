@@ -1,9 +1,8 @@
 import React from "react";
-import {HashRouter, useNavigate} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
 import MainManuScreen from "./components/Screens/MainManuScreen";
 import Profile from "./components/Screens/Profile";
-import {Button} from "primereact/button";
 import PageFooter from "./components/UI/Page/PageFooter";
 
 export default ({}) => {
