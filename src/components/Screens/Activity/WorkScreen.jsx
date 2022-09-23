@@ -28,6 +28,9 @@ export default ({}) => {
         <Vertical>
             <BalanceComponent money={"500"} xp={1000}/>
             <CurrentWorkComponent work={work} employmentDate={new Date().toDateString()}/>
+            <ElevatedVertical>
+                <Button text={"Вакансии"} onClick={() => navigate("/work-list")}/>
+            </ElevatedVertical>
         </Vertical>
     </Page>
 }

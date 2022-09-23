@@ -3,11 +3,15 @@ import Page from "../../UI/Page/Page";
 import Work from "../../UI/ListItems/Work";
 import Icons from "../../../Util/Icons";
 import List from "../../UI/Layout/List";
+import GetContent from "../../../Util/GetContent";
+import {useDispatch} from "react-redux";
 
 export default ({}) => {
+    const content = GetContent()
+
+    const works = content.activity.works
+
     return <Page title={"Список вакансий"}>
-        <List>
-            <Work dto={{src: Icons.courier, name: "Курьер", description: "Гарантированный доход наших водителей и курьеров от 5 до 12 тыс.руб за смену! Заработаете меньше - сразу доплатим разницу бонусами, по курсу 1 бонус = 1 рубль!", salary: 100, requirements: ["Велосипед", "3 класса сельской школы"]}} />
-        </List>
+        <List>{works.map(v => <Work dto={v}/>)}</List>
     </Page>
 }

@@ -1,8 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit'
-import counterReducer from "./CounterSlice"
+import contextReducer from "./ContentSlice"
 
 export default configureStore({
     reducer: {
-        counter: counterReducer
+        content: contextReducer
     }
 })

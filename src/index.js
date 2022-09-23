@@ -4,7 +4,7 @@ import React from "react";
 import {Route, Routes} from "react-router";
 import './index.css'
 import {Provider} from "react-redux";
-import Store from "./redux/Store";
+import Store from "./Redux/Store";
 import MainManuScreen from "./components/Screens/MainManuScreen";
 import ClickerScreen from "./components/Screens/ClickerScreen";
 import ShopScreen from "./components/Screens/Shop/ShopScreen";
@@ -28,6 +28,8 @@ import Profile from "./components/Screens/Profile/ProfileScreen";
 
 LoadContent()
 const rootElement = document.getElementById("root");
+
+window.store = Store
 
 render(
     <Provider store={Store}>
