@@ -1,16 +1,22 @@
 import React from "react";
 import Page from "../../UI/Page/Page";
-import Icons from "../../../Util/Icons";
-import Grid from "../../UI/Layout/Grid";
-import SquareImgButton from "../../UI/UIComponents/SquareImgButton";
+import Vertical from "../../UI/Layout/Vertical";
+import ElevatedVertical from "../../UI/Layout/ElevatedVertical";
+import Button from "../../UI/UIComponents/Button";
+import {useNavigate} from "react-router-dom";
 
 export default ({}) => {
+    const navigate = useNavigate()
+
     return <Page title={"Магазин"}>
-        <Grid>
-            <SquareImgButton text={"Одежда"} src={Icons.clothes} path={"/clothes"}/>
-            <SquareImgButton text={"Гаджеты"} src={Icons.smartphone} path={"/gadgets/types"}/>
-            <SquareImgButton text={"Транспорт"} src={Icons.vehicle} path={"/vehicles"}/>
-            <SquareImgButton text={"Недвижимость"} src={Icons.realEstate} path={"/real-estate"}/>
-        </Grid>
+        <Vertical>
+            <ElevatedVertical>
+                <Button text={"Одежда"} onClick={() => navigate("/clothes")}/>
+                <Button text={"Транспорт"} onClick={() => navigate("/vehicles/types")}/>
+                <Button text={"Гаджеты"} onClick={() => navigate("/gadgets/types")}/>
+                <Button text={"Недвижимость"} onClick={() => navigate("/real-estates")}/>
+
+            </ElevatedVertical>
+        </Vertical>
     </Page>
 }

@@ -28,6 +28,11 @@ import Profile from "./components/Screens/Profile/ProfileScreen";
 import GadgetTypesScreen from "./components/Screens/Shop/GadgetTypesScreen";
 import PhonesScreen from "./components/Screens/Shop/PhonesScreen";
 import ComputersScreen from "./components/Screens/Shop/ComputersScreen";
+import VehicleTypesScreen from "./components/Screens/Shop/VehicleTypesScreen";
+import CarsScreen from "./components/Screens/Shop/CarsScreen";
+import AirplancesScreen from "./components/Screens/Shop/AirplancesScreen";
+import HelicoptersScreen from "./components/Screens/Shop/HelicoptersScreen";
+import YachtsScreen from "./components/Screens/Shop/YachtsScreen";
 
 LoadContent()
 const rootElement = document.getElementById("root");
@@ -54,7 +59,13 @@ render(
                 <Route path={"/gadgets/computers"} element={<ComputersScreen/>}/>
 
                 <Route path={"/real-estate"} element={<RealEstateScreen/>}/>
-                <Route path={"/vehicles"} element={<VehiclesScreen/>}/>
+
+                <Route path={"/vehicles/types"} element={<VehicleTypesScreen/>}/>
+                <Route path={"/vehicles/cars"} element={<CarsScreen/>}/>
+                <Route path={"/vehicles/airplanes"} element={<AirplancesScreen/>}/>
+                <Route path={"/vehicles/helicopters"} element={<HelicoptersScreen/>}/>
+                <Route path={"/vehicles/yachts"} element={<YachtsScreen/>}/>
+
 
                 <Route path={"/work"} element={<WorkScreen/>}/>
                 <Route path={"/work-list"} element={<WorkListScreen/>}/>
