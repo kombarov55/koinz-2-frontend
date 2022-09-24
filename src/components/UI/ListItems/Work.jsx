@@ -4,28 +4,45 @@ import Horizontal from "../Layout/Horizontal";
 import Img from "../UIComponents/Img";
 import Label from "../UIComponents/Label";
 import Button from "../UIComponents/Button";
+import Icons from "../../../Util/Icons";
+import Avatar from "../Icons/Avatar";
 
 export default ({dto}) => {
-    const {src, name, description, salary, requirements} = dto
+    const {src, name, description, moneyWage, xpWage, requirements} = dto
 
     return <Vertical margin={"1vmax 10vmax"}
                      padding={"1vmax"}
                      width={"90%"}
                      alignItems={"stretch"}
                      boxShadowEnabled={true}
+                     gap={"1.5vmax"}
     >
-        <Horizontal justifyContent={"flex-start"} gap={"2vmax"}>
-            <Img src={src}/>
-            <Label text={name} size={"big"}/>
+        <Horizontal>
+            <Horizontal justifyContent={"flex-start"} gap={"2vmax"}>
+                <Avatar src={src}/>
+                <Label text={name} size={"normal"}/>
+            </Horizontal>
+
+            <Button text={"Устроиться"}/>
         </Horizontal>
-        <Label text={description}/>
 
-        <Vertical alignItems={"flex-start"} gap={"0"}>
-            <Label text={"Требования:"}/>
-            {requirements.map(v => <Label text={`- ${v}`}/>)}
-        </Vertical>
+        <Horizontal>
+            <Vertical alignItems={"flex-start"} gap={"0"}>
+                <Label text={"Требования:"}/>
+                {requirements.map(v => <Label text={`- ${v}`}/>)}
+            </Vertical>
 
-        <Label text={`$${salary} в час`} color={"rgb(11 155 82)"} fontWeight={"bold"}/>
-        <Button text={"Устроиться"}/>
+            <Vertical gap={"0.5vmax"}>
+                <Horizontal justifyContent={"flex-start"}>
+                    <Img src={Icons.wallet} size={"small"}/>
+                    <Label text={`$${moneyWage} в час`}/>
+                </Horizontal>
+                <Horizontal justifyContent={"flex-start"}>
+                    <Img src={Icons.books} size={"small"}/>
+                    <Label text={`${xpWage} xp в час`}/>
+                </Horizontal>
+            </Vertical>
+        </Horizontal>
+
     </Vertical>
 }
