@@ -4,6 +4,8 @@ import Horizontal from "../Layout/Horizontal";
 import Img from "../UIComponents/Img";
 import Label from "../UIComponents/Label";
 import Button from "../UIComponents/Button";
+import Avatar from "../Icons/Avatar";
+import Icons from "../../../Util/Icons";
 
 export default ({dto}) => {
     const {src, name, description, price} = dto
@@ -14,12 +16,25 @@ export default ({dto}) => {
                      alignItems={"stretch"}
                      boxShadowEnabled={true}
     >
-        <Horizontal justifyContent={"flex-start"} gap={"2vmax"}>
-            <Img src={src}/>
-            <Label text={name} size={"big"}/>
+        <Horizontal>
+            <Horizontal justifyContent={"flex-start"} gap={"2vmax"}>
+                <Avatar src={src}/>
+                <Label text={name} size={"normal"}/>
+            </Horizontal>
+
+            <Button text={"Купить"}/>
         </Horizontal>
-        <Label text={description}/>
-        <Label text={price} color={"rgb(11 155 82)"} fontWeight={"bold"}/>
-        <Button text={"Купить"}/>
+        <Horizontal justifyContent={"flex-start"}>
+            <Horizontal>
+                <Label text={description}/>
+            </Horizontal>
+
+            <Horizontal justifyContent={"flex-start"}>
+                <Img src={Icons.wallet} size={"small"}/>
+                <Label text={`$${price}`} fontWeight={"bold"}/>
+            </Horizontal>
+        </Horizontal>
+
+
     </Vertical>
 }

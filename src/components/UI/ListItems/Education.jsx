@@ -16,11 +16,16 @@ export default ({dto}) => {
                 <Img src={src} size={"normal"}/>
                 <Label text={name} size={"normal"}/>
             </Horizontal>
-            <Horizontal justifyContent={"flex-start"} alignItems={"center"}>
-                <Img src={Icons.coins} size={"small"}/>
-                <Label text={`$${price}`}/>
+            <Horizontal>
+                <Horizontal justifyContent={"flex-start"} alignItems={"center"}>
+                    <Img src={Icons.coins} size={"small"}/>
+                    <Label text={`$${price}`}/>
+                </Horizontal>
+
+                <Button text={learned ? "Изучено" : "Купить"} enabled={!learned}/>
             </Horizontal>
-            <Button text={learned ? "Изучено" : "Получить образование"} enabled={!learned}/>
+
+
 
         </ElevatedVertical>
     </>

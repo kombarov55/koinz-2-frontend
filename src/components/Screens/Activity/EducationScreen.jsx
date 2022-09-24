@@ -6,16 +6,16 @@ import Label from "../../UI/UIComponents/Label";
 import Education from "../../UI/ListItems/Education";
 import Icons from "../../../Util/Icons";
 import List from "../../UI/Layout/List";
+import {useSelector} from "react-redux";
 
 export default ({}) => {
+    let educations = useSelector(state => state?.content?.value?.activity?.educations)
+
     return <Page title={"Образование"}>
         <Vertical>
             <ElevatedVertical>
                 <List>
-                    <Education dto={{src: Icons.education, name: "Основное общее", price: 500, learned: true}}/>
-                    <Education dto={{src: Icons.education, name: "Среднее общее", price: 2000, learned: false}}/>
-                    <Education dto={{src: Icons.education, name: "Среднее профессиональное", price: 25000, learned: false}}/>
-                    <Education dto={{src: Icons.education, name: "Высшее", price: 100000, learned: false}}/>
+                    {educations?.map(v => <Education dto={v}/>)}
                 </List>
             </ElevatedVertical>
         </Vertical>
