@@ -2,16 +2,16 @@ import React from "react";
 import Page from "../../UI/Page/Page";
 import List from "../../UI/Layout/List";
 import Gadget from "../../UI/ListItems/Gadget";
+import Icons from "../../../Util/Icons";
 import GetContent from "../../../Util/GetContent";
+import {useSelector} from "react-redux";
 
 export default ({}) => {
-    const content = GetContent()
+    const phones = useSelector(state => state?.content?.value?.shop?.gadgets?.phones)
 
-    const gadgets = content.shop.gadgets.phones
-
-    return <Page title={"Гаджеты"}>
+    return <Page title={"Телефоны"}>
         <List>
-            {gadgets.map(v => <Gadget dto={v}/>)}
+            {phones?.map(v => <Gadget dto={v}/>)}
         </List>
     </Page>
 }

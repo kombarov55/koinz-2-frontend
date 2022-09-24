@@ -25,6 +25,9 @@ import GamesScreen from "./components/Screens/Activity/GamesScreen";
 import WorkListScreen from "./components/Screens/Activity/WorkListScreen";
 import LoadContent from "./Util/LoadContent";
 import Profile from "./components/Screens/Profile/ProfileScreen";
+import GadgetTypesScreen from "./components/Screens/Shop/GadgetTypesScreen";
+import PhonesScreen from "./components/Screens/Shop/PhonesScreen";
+import ComputersScreen from "./components/Screens/Shop/ComputersScreen";
 
 LoadContent()
 const rootElement = document.getElementById("root");
@@ -46,6 +49,10 @@ render(
 
                 <Route path={"/clothes"} element={<ClothesScreen/>}/>
                 <Route path={"/gadgets"} element={<GadgetsScreen/>}/>
+                <Route path={"/gadgets/types"} element={<GadgetTypesScreen/>}/>
+                <Route path={"/gadgets/phones"} element={<PhonesScreen/>}/>
+                <Route path={"/gadgets/computers"} element={<ComputersScreen/>}/>
+
                 <Route path={"/real-estate"} element={<RealEstateScreen/>}/>
                 <Route path={"/vehicles"} element={<VehiclesScreen/>}/>
 

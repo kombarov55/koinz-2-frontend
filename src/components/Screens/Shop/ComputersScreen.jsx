@@ -3,15 +3,14 @@ import Page from "../../UI/Page/Page";
 import List from "../../UI/Layout/List";
 import Gadget from "../../UI/ListItems/Gadget";
 import GetContent from "../../../Util/GetContent";
+import {useSelector} from "react-redux";
 
 export default ({}) => {
-    const content = GetContent()
-
-    const gadgets = content.shop.gadgets.phones
+    const computers = useSelector(state => state?.content?.value?.shop?.gadgets?.computers)
 
     return <Page title={"Гаджеты"}>
         <List>
-            {gadgets.map(v => <Gadget dto={v}/>)}
+            {computers?.map(v => <Gadget dto={v}/>)}
         </List>
     </Page>
 }
