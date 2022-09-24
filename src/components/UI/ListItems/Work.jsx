@@ -18,7 +18,7 @@ export default ({dto}) => {
                      gap={"1.5vmax"}
     >
         <Horizontal>
-            <Horizontal justifyContent={"flex-start"} gap={"2vmax"}>
+            <Horizontal justifyContent={"flex-start"} gap={"1vmax"}>
                 <Avatar src={src}/>
                 <Label text={name} size={"normal"}/>
             </Horizontal>
